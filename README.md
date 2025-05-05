@@ -15,4 +15,7 @@ Commands:
 <li>help - Show a help message</li>
 <li>exit - Close the terminal</li>
 
+
 <b>WeatherDOS 1.0</b>
+
+<img src="WeatherDOS-v1.0.png">
