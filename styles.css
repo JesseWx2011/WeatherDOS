@@ -1,0 +1,133 @@
+@font-face {
+    font-family: 'DOS';
+    src: url('./Perfect DOS VGA 437.ttf');
+}
+body {
+    text-transform: uppercase;
+    margin: 0;
+    padding: 0;
+    background-color: #000;
+    font-family: 'DOS', monospace;
+    color: #fff;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.terminal {
+    width: 80vh; /* 4:3 aspect ratio based on height */
+    height: 60vh; /* 3/4 of the width */
+    background-color: #000;
+    border: none;
+    box-shadow: none;
+    position: relative;
+    max-width: 1067px; /* Maximum width to maintain 4:3 on very tall screens */
+    max-height: 800px; /* Maximum height to maintain 4:3 on very wide screens */
+}
+
+.terminal-header {
+    background-color: #000080;
+    padding: 5px 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #333;
+}
+
+.terminal-body {
+    padding: 10px;
+    height: calc(100% - 30px);
+    overflow-y: auto;
+}
+
+.output {
+    margin-bottom: 10px;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+.input-line {
+    display: flex;
+    align-items: center;
+    position: sticky;
+    bottom: 0;
+    background-color: #000;
+    padding: 5px 0;
+}
+
+.prompt {
+    color: #fff;
+    margin-right: 5px;
+    font-size: 18px;
+}
+
+#command-input {
+    text-transform: uppercase;
+    background: transparent;
+    border: none;
+    color: #fff;
+    font-family: 'DOS', monospace;
+    font-size: 18px;
+    width: calc(100% - 30px);
+    outline: none;
+    line-height: 1.5;
+}
+
+.welcome-message {
+    color: #fff;
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+.controls {
+    cursor: pointer;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #000;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #333;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #444;
+}
+
+/* Media query for very tall screens */
+@media (min-aspect-ratio: 4/3) {
+    .terminal {
+        width: 80vw;
+        height: 60vw;
+    }
+}
+
+/* Media query for very wide screens */
+@media (max-aspect-ratio: 4/3) {
+    .terminal {
+        width: 80vh;
+        height: 60vh;
+    }
+}
+
+.alert-new {
+    color: #ff0000;
+    animation: blink 1s infinite;
+}
+
+@keyframes blink {
+    0% { opacity: 1; }
+    50% { opacity: 0.5; }
+    100% { opacity: 1; }
+} 
