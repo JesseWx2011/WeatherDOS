@@ -11,7 +11,7 @@ Commands:
 <li>clear log - Clear today's weather logs</li>
 <li>log - View all logged responses</li>
 <li>log [YYYY-MM-DD] - View logged responses for specific date</li>
-<li>clear - Clear the terminal<li>
+<li>clear - Clear the terminal</li>
 <li>help - Show a help message</li>
 <li>exit - Close the terminal</li>
 
